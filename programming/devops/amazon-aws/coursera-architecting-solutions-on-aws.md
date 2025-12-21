@@ -277,9 +277,42 @@ A loosely coupled architecture minimizes the bottlenecks that are caused by sync
 - EBS - know about this already.
 - Elastic File System (EFS) is a fully managed, serverless, and scalable cloud file storage service from AWS that allows multiple AWS compute instances (like EC 2) to share access to files using the standard NFS protocol.
 
+## Running Containers of AWS and NAT Gateway
+- ECS/EC2 because they want to use custom Amazon Machine Image (AMI) and have SSH access to the instances.
+- Launch types
+	- EC2 for managing the cluster
+	- Fargate - running containers directly, without any EC2 instances
+- Container registry - either Amazon ECR, Docker Hub, or self-hosted registry
+- Fargate - the "serverless way" to host your Amazon ECS workloads.
 
+## NAT Devices
+- Used for resources in private subnets to connect to the internet, other VPCs, or on-premises networks.
+- NAT - replaces the source IPv4 address of the instances with the address of the NAT device.
+- **NAT gateway** - this is a managed NAT device offered by AWS (recommended for better availability and bandwidth + less admin)
+- **NAT instance** - this is your own NAT device on an EC2 instance
 
+Outpost
+ECS Anywhere - why??
+AWS Backup
+AWS Systems Manager
 
+##  AWS Services for Hybrid Deployments
 
+- ECS anywhere - provide a consistent experience across your container-based applications for working and tooling and APIs.
+- Systems Manager - UI to view operational data from multiple AWS services/resources
+- Backup - What it sounds like
+
+## Architecture Optimizations for Week 3
+
+- Disaster recovery plan
+- Backup and restore
+- Pilot light - replicate data from one region to the other
+- Warm standby - provisioning a scaled down but functional env in another region
+- Multi-site  - What it sounds like
+- Direct connect with AWS VPN - can be the failover for AWS Direct connect
+
+# Week 4 - Fast-Growing Startup
+
+-
 
 

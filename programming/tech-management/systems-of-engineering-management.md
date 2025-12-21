@@ -1,0 +1,27 @@
+	
+# Organizations
+
+- Tech Lead Managers (TLMs). Managers supporting fewer than four engineers tend to function as TLMs, taking on a share of design and implementation work. For some folks this role can uniquely leverage their strengths, but it's a role with limited career opportunities. To progress as a manager, they'll want more time to focus on developing their management skills. Alternatively, to progress toward staff engineering roles, they'll find it difficult to spend enough time on the technical details.
+
+## Ways to manage entropy
+
+- The second most effective time thief that I've found is ad hoc interruptions: getting pinged on HipChat or Slack, taps on the shoulder, alerts from your on-call system, high-volume email lists, and so on. The strategy here is to funnel interruptions into an increasingly small area, and then automate that area as much as possible. Ask people to file tickets, create chatbots that automate filing tickets, create a service cookbook, and so on.
+- Lately, I'm increasingly hearing folks reference the idea of organizational debt. This is the organizational sibling of technical debt, and it represents things like biased interview processes and inequitable compensation mechanisms. These are systemic problems that are preventing your organization from reaching its potential. Like technical debt, these risks linger because they are never the most pressing problem. Until that one fateful moment when they are.
+
+## Migrations
+
+- Engineers hate technical debt. If there is an easy project that they can personally do to reduce tech debt, they'll take it on themselves. Engineering managers hate technical debt, too. If there is an easy project that their team can execute in isolation, they'll get it scheduled. In aggregate, this leads to a dynamic in which there is very little low-hanging fruit to reduce technical debt, and most remaining options require many teams working together to implement them. The result: migrations.
+- The first phase of a migration is de-risking it, and to do so as quickly and cheaply as possible. Write a design document and shop it with the teams that you believe will have the hardest time migrating. Iterate. Shop it with teams who have atypical patterns and edge cases. Iterate. Test it against the next six to twelve months of roadmap. Iterate.
+- Once you've handled as much of the migration programmatically as possible, figure out the self-service tooling and documentation that you can provide to allow teams to make the necessary changes without getting stuck. The best migration tools are incremental and reversible: folks should be able to immediately return to previous behavior if something goes wrong, and they should have the necessary expressiveness to de-risk their particular migration path.
+
+# Interviews
+
+- My experience is that you can't conduct a kind, candidate-centric interview process if your interviewers are tightly time-constrained. Conversely, if an interviewer is unkind to a candidate (and these unkindnesses are typically of the "with a whisper not a bang" variety), I believe it is very often a structural problem with your interviewing process, and not something you can reliably dismiss as an issue with that specific interviewer.
+- Signals:
+	- Prepared presentations on a topic. Instead of asking the candidate to explain some architecture on the spur of the moment, give them a warning before the interview that you'll ask them to talk about a given topic for 30 minutes, which is a closer approximation of what they'd be doing on the job.
+	- Giving demos of an existing product or feature (ideally the one they'd be working on.) This task helps them learn more about your product and get a sense of whether they have interest around what you're doing, and it helps you get a sense of how they deliver feedback and criticism.
+	- **Whenever you extend an offer to a candidate, have every interviewer send a note to them saying that they enjoyed the interview.** (Compliment rules apply: more detailed explanations are much more meaningful.) At that point, as an interviewer, it can be easy to want to get back to your "real job," but resist the temptation to quit closing just before you close: it's a very powerful human experience to receive a dozen positive emails when you're pondering if you should accept a job offer.
+
+
+Create me a flowchart for the current payment flow. So the successful payment would go from create setup intent and then create subscription and the subscription would just be succeeded. Now for 3DS payment or additional authentication needed, there will be an intermediate step wherein the subscription will be created and then a payment intent is created, but that requires user action. From that situation, we can go either fail or success, and if it succeeds or fails, it should return the same redirect URL to the front end. So if it succeeds, then we should redirect to the billing page with a success message, and if it fails, we should redirect maybe to the billing page but allow the user to see that it failed. Currently right now, the subscription gets created and it's stuck in an incomplete state. Now for Korean cards...
+Now for Korean cards, after you set up intent, a subscription will be created with a payment intent for that Korean card. Now that has two actions, one is to confirm the setup and the second is to confirm the payment. Now in both the situations, the thing can fail and we should set the subscription to not work if the payment doesn't go through.
